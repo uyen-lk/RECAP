@@ -8,6 +8,8 @@ RECAP supports two unlearning benchmarks:
 - **WMDP** — hazardous knowledge (multiple-choice)
 
 
+![RECAP framework](asset/framework.png)
+
 ## 📍 Table of Contents
 
 1. [Environment Setup](#1-environment-setup)
@@ -20,8 +22,6 @@ RECAP supports two unlearning benchmarks:
 6. [Citing Our Work](#6-citing-our-work)
 
 ---
-
-
 
 ## ⚡ 1. Environment Setup
 ```
