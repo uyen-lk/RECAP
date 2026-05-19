@@ -57,7 +57,7 @@ Higher similarity = more unlearned knowledge recovered = more effective attack.
 | BERTScore F1 | Semantic similarity |
 
 ```
-python src/eval_tofu_attack.py \
+python src/tofu_attack.py \
     --model <huggingface_model_id_or_local_path> \
     --data_path data/dataset_tofu.csv \
     --output_dir output \
@@ -92,7 +92,7 @@ python src/eval_tofu_attack.py \
 Wraps each WMDP-Cyber question in an adversarial attack prefix, then measures multiple-choice accuracy by scoring next-token log-probabilities for answer letters A/B/C/D. Directly measures whether an attack causes the model to answer hazardous cybersecurity questions correctly.
 
 ```
-python src/eval_wmdp_mc_attack.py \
+python src/wmdp_attack.py \
     --model <huggingface_model_id_or_local_path> \
     --output_dir output \
     --apply_chat_template \
@@ -142,7 +142,8 @@ Each attacker is applied under multiple prompting strategies to study how presen
 |---|---|
 | `zero_shot` | Attack prefix prepended directly to the question in a single user turn |
 | `few_shot` | 2 benign domain-relevant Q&A examples prepended before the attack prefix + question |
-| `multiturn` | True two-turn dialogue: the model generates a real Turn 1 reply to an attacker-specific setup message. Turn 2 then asks the target question. One Turn 1 generation is reused across all questions for the same attacker. For base model such as Phi-1.5 with no chat template, a plain-text "written history" format is embedded before the question. |
+| `multiturn` | True two-turn dialogue: the model generates a real Turn 1 reply to an attacker-specific setup message. Turn 2 then asks the target question. One Turn 1 generation is reused across all questions for the same attacker.| 
+| `context_injection` | For base model such as Phi-1.5 with no chat template, a plain-text "written history" format is embedded before the question to mimic multi-turn prompting. |
 
 ---
 
