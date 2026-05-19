@@ -155,7 +155,7 @@ sbatch scripts/batch_wmdp.sh
 
 ## 📝 6. Citing Our Work
 
-If you find our codebase and dataset beneficial, please cite our work:
+If you find our codebase beneficial, please cite our work:
 ```
 ```
 
