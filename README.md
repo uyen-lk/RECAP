@@ -26,8 +26,8 @@ RECAP supports two unlearning benchmarks:
 ## ⚡ 1. Environment Setup
 ```
 #Environment setup
-conda create -n probe-unlearn python=3.11
-conda activate probe-unlearn
+conda create -n recap python=3.11
+conda activate recap
 pip install -r requirements.txt
 
 mkdir log
